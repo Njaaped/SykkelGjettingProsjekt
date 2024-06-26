@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} SykkelGjetter {% endblock %}</title>
+
+    {% block styles %}{% endblock %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+      
+</head>
+<body class="antialiased text-slate-500 dark:text-slate-400 bg-gray dark:bg-slate-900">
+    <nav>
+        <div class="tracking-tight fixed flex top-10 left-20 
+        text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80
+        w-80 h-24 rounded-lg hover:h-28 transition-all">
+            <a class="text-3xl sm:text-4xl font-extrabold flex justify-center items-center w-full h-full " href="/"> Gjett her </a>
+        </div>
+        <div class="tracking-tight fixed flex top-10 right-20 
+        text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80
+        w-80 h-24 rounded-lg hover:h-28 transition-all">
+            <a class="text-3xl sm:text-4xl font-extrabold flex justify-center items-center w-full h-full" href="/final"> Resultat her</a>
+        </div>
+    </nav>
+    <div class="flex h-screen bg-gradient-to-b from-sky-950 to-sky-700 ">
+        <div class="m-auto">
+        {% block content %}{% endblock %}
+        </div>
+    </div>
+    <!-- block for å legge til custom scripts -->
+    {% block scripts %} {% endblock %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="{{ url_for('static', filename='script/script.js') }}"></script>
+</body>
+</html>
+
+
+
+

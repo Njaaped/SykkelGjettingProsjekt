@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="h-screen w-full grid place-items-center bg-transparent">
+    <div class="bg-transparent grid place-items-left mt-40">
+        <h1 class="text-white text-2xl"> Antall syklister🚴🏻 som vil sykle med kriteriende:</h1>
+        <h3 class="text-white text-2xl">* fra kl {{ tid }} til {{ tid2 }}🕚</h1>
+        <h3 class="text-white text-2xl">* på en {{ ukedag }} 🌎</h1>
+        <h3 class="text-white text-2xl">* på {{ dato }} {{ ar }} 📅</h1>
+        <h3 class="text-white text-2xl">* med {{ temperatur }}°C 🌡️</h1>
+        <h3 class="text-white text-2xl">* og {{ solskinn }} er:</h1>
+        <h3 class="text-white text-2xl"> ➡️{{ res }}⬅️ antall syklister 🚴🏻 </h1>
+    </div>
+    <figure class="relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
+        <a href="#">
+          <img class="rounded-lg" src="{{ url_for('static', filename='images/omrade.jpg') }}" alt="image description">
+        </a>
+        <figcaption class="absolute px-4 text-lg text-white top-16">
+            <p>Her er det syklistene sykler:</p>
+        </figcaption>
+      </figure>
+</div>
+
+
+
+
+{% endblock %}
+
+
